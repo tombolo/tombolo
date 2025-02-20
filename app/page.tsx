@@ -1,23 +1,11 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
-  const [scrolled, setScrolled] = useState(false);
+  
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -135,7 +123,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Hi, I'm Joseph Mumo
+              Hi, I&apos;m Joseph Mumo
             </motion.h1>
             <motion.p
               className="text-lg text-white dark:text-gray-400 mt-4 max-w-2xl mx-auto"
@@ -186,9 +174,9 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            I'm a full-stack developer at <strong>Tombolo Labs</strong>, where I build innovative
+            I&apos;m a full-stack developer at <strong>Tombolo Labs</strong>, where I build innovative
             solutions for modern problems. I specialize in technologies like Next.js, React, and
-            Tailwind CSS, and I'm passionate about creating seamless user experiences.
+            Tailwind CSS, and I&apos;m passionate about creating seamless user experiences.
           </motion.p>
         </div>
       </section>
